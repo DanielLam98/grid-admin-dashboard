@@ -1,0 +1,343 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  line-height: 1;
+}
+
+/* CSS Reset Above */
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.sidebar {
+  grid-row: 1/-1;
+  background-color: lightblue;
+  display: grid;
+  grid-template-rows: 0.2fr 5fr;
+  color: white;
+  justify-content: start;
+}
+
+.sidebar > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 5px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.sidebar svg {
+  width: 30px;
+}
+
+/* Search Bar UI and PFP */
+
+nav ul {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-weight: bold;
+}
+
+.header {
+  grid-column: 2/ -1;
+  display: grid;
+  grid-template-rows: 70px 80px;
+  align-items: start;
+}
+
+.header .search {
+  display: grid;
+  grid-template-columns: 1fr minmax(10%, 5fr) 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  place-items: center;
+}
+
+.header .search img {
+  width: 30px;
+}
+
+.header svg {
+  width: 20px;
+}
+
+.header .search input {
+  width: 100%;
+}
+
+.header .search button:not(:first-child) {
+  justify-self: end;
+}
+
+/* User UI */
+
+.userUI {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 70px;
+  padding: 0px 15px;
+  column-gap: 100px;
+}
+.userUI img {
+  width: 60px;
+  grid-row: 1/-1;
+}
+
+.userUI > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+}
+
+.userUI > div > img {
+  justify-self: end;
+}
+
+.userUI > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: end;
+}
+
+.main {
+  background-color: lightgrey;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 15px;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15px repeat(3, 170px);
+  gap: 15px;
+  padding: 10px;
+}
+
+.mainContent h3 {
+  grid-column: 1/-1;
+}
+
+.mainContent .mainCard {
+  background-color: white;
+  padding: 20px 10px;
+  border-radius: 3%;
+  border-left: 5px solid lightsalmon;
+}
+
+.mainContent h3 {
+  font-weight: 500;
+}
+
+.mainContent p {
+  padding-top: 5px;
+  font-size: 0.8em;
+  color: grey;
+}
+
+.mainCard svg {
+  width: 15px;
+}
+
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.mainCard p {
+  flex: 1;
+}
+
+.mainCard ul {
+  display: flex;
+  align-self: flex-end;
+  justify-content: start;
+}
+
+.mainSidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15px 255px 255px;
+  gap: 15px;
+  padding: 10px;
+}
+
+.mainSidebar h5 {
+  font-weight: 500;
+}
+
+.siteMaintenance {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  padding: 15px 25px;
+  background-color: white;
+  border-radius: 3%;
+  overflow: hidden;
+}
+
+.siteMaintenance div:nth-child(-n + 2) {
+  padding-bottom: 10px;
+}
+
+.siteMaintenance h6 {
+  font-weight: bold;
+  font-size: 0.85em;
+  padding-bottom: 2px;
+}
+
+.siteMaintenance p {
+  font-size: 0.7em;
+  color: gray;
+}
+
+.siteMaintenance div:nth-child(-n + 2) {
+  border-bottom: 1px solid lightgrey;
+}
+
+.trending img {
+  width: 50px;
+}
