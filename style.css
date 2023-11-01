@@ -137,7 +137,7 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
@@ -156,6 +156,7 @@ body {
   gap: 5px;
   padding-left: 10px;
   font-weight: bold;
+  padding-top: 15px;
 }
 
 .sidebar svg {
@@ -193,19 +194,39 @@ nav li {
 }
 
 .header .search img {
-  width: 30px;
+  width: 40px;
+  border-radius: 50%;
 }
 
 .header svg {
-  width: 20px;
+  width: 25px;
 }
 
 .header .search input {
   width: 100%;
+  background-color: lightgray;
+  border: none;
+  height: 25px;
+  border-radius: 5px;
+  outline: 0;
+  padding: 0 15px;
 }
 
 .header .search button:not(:first-child) {
   justify-self: end;
+}
+
+.search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.search p {
+  font-weight: bold;
+  justify-self: start;
 }
 
 /* User UI */
@@ -220,6 +241,7 @@ nav li {
 .userUI img {
   width: 60px;
   grid-row: 1/-1;
+  border-radius: 50%;
 }
 
 .userUI > div {
@@ -235,11 +257,28 @@ nav li {
   justify-self: end;
 }
 
+.userUI > div p {
+  font-size: 0.6em;
+}
+
+.userUI > div h4 {
+  font-weight: bold;
+}
+
+/* right side of user UI */
 .userUI > ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: end;
+  place-items: center;
+  padding-left: 50%;
+}
+
+.userUI ul button {
+  background-color: lightskyblue;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: white;
 }
 
 .main {
@@ -252,7 +291,7 @@ nav li {
 .mainContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 15px repeat(3, 170px);
+  grid-template-rows: 15px repeat(3, 175px);
   gap: 15px;
   padding: 10px;
 }
@@ -338,6 +377,43 @@ nav li {
   border-bottom: 1px solid lightgrey;
 }
 
+.trending > div {
+  display: grid;
+  grid-template-rows: 0.5fr;
+  place-items: start;
+  padding: 15px 25px;
+  background-color: white;
+  border-radius: 3%;
+}
+
+.trending h5 {
+  padding-bottom: 10px;
+}
+
 .trending img {
   width: 50px;
+  height: 50px;
+  grid-row: 1/-1;
+  border-radius: 50%;
+}
+
+.trending > div ul {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.trending > div > ul > li {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.trending > div > ul > li > p:nth-child(2) {
+  align-self: end;
+}
+
+.trending > div > ul > li > p:nth-child(3) {
+  font-size: 0.8em;
+  color: grey;
 }
